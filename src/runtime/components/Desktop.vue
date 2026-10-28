@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import PaperSystemBar from './PaperSystemBar.vue'
 import PaperWindowSnapHints from './PaperWindowSnapHints.vue'
-import { useDesktopWorkArea } from '@owdproject/core/runtime/composables/useDesktopWorkArea'
+import { useDesktopWorkArea } from 'nuxt-desktop/runtime/composables/useDesktopWorkArea'
 
 const shellStageRef = ref<HTMLElement | null>(null)
 useDesktopWorkArea(shellStageRef)

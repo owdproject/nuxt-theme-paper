@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useApplicationManager } from '@owdproject/core/runtime/composables/useApplicationManager'
-import { useApplicationEntries } from '@owdproject/core/runtime/composables/useApplicationEntries'
-import { useDesktopVolumeStore } from '@owdproject/core/runtime/stores/storeDesktopVolume'
+import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
+import { useApplicationEntries } from 'nuxt-desktop/runtime/composables/useApplicationEntries'
+import { useDesktopVolumeStore } from 'nuxt-desktop/runtime/stores/storeDesktopVolume'
 import { usePaperAppearance } from '../composables/usePaperAppearance'
 
 const open = ref(false)

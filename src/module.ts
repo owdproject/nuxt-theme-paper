@@ -5,8 +5,7 @@ import {
   addPlugin,
   installModule,
 } from '@nuxt/kit'
-import { defu } from 'defu'
-import { defineDesktopTheme } from '@owdproject/core'
+import { defineDesktopTheme } from 'nuxt-desktop'
 import { registerThemeTailwindPath } from '@owdproject/kit-tailwind/kit/registerTailwindPath'
 import { paperAppearanceBootstrapScript } from './runtime/utils/paperAppearance'
 
@@ -46,7 +45,10 @@ export default defineDesktopTheme({
 
     nuxt.options.app.head = {
       ...head,
-      htmlAttrs: defu({ 'data-owd-appearance': 'light' }, head.htmlAttrs ?? {}),
+      htmlAttrs: {
+        'data-owd-appearance': 'light',
+        ...(head.htmlAttrs ?? {}),
+      },
       script: [
         {
           key: 'paper-appearance-bootstrap',
