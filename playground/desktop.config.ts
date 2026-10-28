@@ -2,7 +2,7 @@ import { defineDesktopConfig } from '@owdproject/core'
 
 export default defineDesktopConfig({
   theme: '@owdproject/theme-paper',
-  modules: ['@owdproject/module-fs', '@owdproject/module-persistence'],
+  modules: ['@owdproject/module-fs', '@owdproject/nuxt-persistence-pinia'],
   apps: [
     '@owdproject/app-dino',
     '@owdproject/app-gridsky',
