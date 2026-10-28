@@ -1,6 +1,6 @@
 import { nextTick } from 'vue'
 import { defineNuxtPlugin } from 'nuxt/app'
-import { useApplicationManager } from '@owdproject/core/runtime/composables/useApplicationManager'
+import { useApplicationManager } from '@owdproject/nuxt/runtime/composables/useApplicationManager'
 
 export default defineNuxtPlugin({
   name: 'theme-paper-playground-launch',
@@ -10,12 +10,12 @@ export default defineNuxtPlugin({
     const applicationManager = useApplicationManager()
 
     async function runDemo() {
-      if (!applicationManager.isAppDefined('org.owdproject.explorer')) {
+      if (!applicationManager.isAppDefined('org.owdproject.terminal')) {
         return false
       }
       await applicationManager.execAppCommand(
-        'org.owdproject.explorer',
-        'explorer /mnt/test',
+        'org.owdproject.terminal',
+        'terminal',
       )
       return true
     }

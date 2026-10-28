@@ -46,7 +46,7 @@ body {
   overflow: hidden;
 }
 
-.owd-desktop--paper .owd-window__content--centered {
+.owd-desktop--paper .desktop-window__content--centered {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,15 +56,15 @@ body {
   text-align: center;
 }
 
-.owd-desktop--paper .owd-window__content--centered > * {
+.owd-desktop--paper .desktop-window__content--centered > * {
   width: 100%;
 }
 
-.owd-desktop--paper .owd-window__content a {
+.owd-desktop--paper .desktop-window__content a {
   color: var(--paper-accent);
   text-decoration: none;
 }
 
-.owd-desktop--paper .owd-window__content a:hover {
+.owd-desktop--paper .desktop-window__content a:hover {
   text-decoration: underline;
 }

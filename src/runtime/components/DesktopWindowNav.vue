@@ -29,7 +29,7 @@ function onClose() {
       </span>
     </div>
 
-    <div class="owd-window-nav__btn-group owd-window-nav__btn-group--append">
+    <div class="desktop-window-nav__btn-group owd-window-nav__btn-group owd-window-nav__btn-group--append">
       <div
         v-if="$slots.append"
         class="owd-window-nav__btn-group owd-window-nav__btn-group--append-inner"

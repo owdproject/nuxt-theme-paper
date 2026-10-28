@@ -7,7 +7,7 @@
 </template>
 
 <style scoped lang="scss">
-:deep(.owd-window__content) {
+:deep(.desktop-window__content) {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;

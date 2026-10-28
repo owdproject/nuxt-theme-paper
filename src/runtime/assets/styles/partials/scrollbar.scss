@@ -29,7 +29,7 @@
 
 /* Scroll only inside window content and app panels — not on body */
 .owd-desktop--paper {
-  .owd-window__content {
+  .desktop-window__content {
     @include paper-scrollbar;
   }
 }

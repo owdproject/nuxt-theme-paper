@@ -21,11 +21,11 @@
   align-items: center;
 }
 
-.owd-desktop--paper .owd-window.resizable-component:not(.paper-window) .owd-window__content {
+.owd-desktop--paper .owd-window.resizable-component:not(.paper-window) .desktop-window__content {
   background: var(--paper-surface);
 }
 
-.owd-desktop--paper .owd-window__content--padded {
+.owd-desktop--paper .desktop-window__content--padded {
   padding: 10px;
   box-sizing: border-box;
 }

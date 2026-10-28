@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import {
   createResolver,
   addComponentsDir,
@@ -5,7 +6,7 @@ import {
   addPlugin,
   installModule,
 } from '@nuxt/kit'
-import { defineDesktopTheme } from 'nuxt-desktop'
+import { defineDesktopTheme } from '@owdproject/nuxt'
 import { registerThemeTailwindPath } from '@owdproject/kit-tailwind/kit/registerTailwindPath'
 import { paperAppearanceBootstrapScript } from './runtime/utils/paperAppearance'
 
@@ -34,7 +35,8 @@ export default defineDesktopTheme({
 
     addImportsDir(resolve('./runtime/composables'))
 
-    nuxt.options.css.push(resolve('./runtime/assets/styles/index.scss'))
+    const css = resolve('./runtime/assets/styles/index.css')
+    nuxt.options.css.push(existsSync(css) ? css : resolve('./runtime/assets/styles/index.scss'))
 
     const head = nuxt.options.app.head ?? {}
     const existingScripts = Array.isArray(head.script)
@@ -61,7 +63,7 @@ export default defineDesktopTheme({
     }
 
     addPlugin({
-      src: resolve('./runtime/plugins/paper-appearance.client.ts'),
+      src: resolve('./runtime/plugins/paper-appearance.client'),
       mode: 'client',
       order: 1,
     })

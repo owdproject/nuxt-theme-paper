@@ -1,4 +1,4 @@
-import { defineDesktopConfig } from '@owdproject/core'
+import { defineDesktopConfig } from '@owdproject/nuxt'
 
 export default defineDesktopConfig({
   theme: '@owdproject/theme-paper',
@@ -11,11 +11,6 @@ export default defineDesktopConfig({
     '@owdproject/app-soundcloud',
     '@owdproject/app-todo',
   ],
-  fs: {
-    mounts: {
-      '/mnt/test': '/test-small.zip',
-    },
-  },
   terminal: {
     welcomeMessage: 'Paper Desktop',
     prompt: '$',

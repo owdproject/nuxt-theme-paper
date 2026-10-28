@@ -16,105 +16,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout OWD client (workspace deps)
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          repository: owdproject/client
-          path: client
-          submodules: recursive
 
-      - name: Checkout kit-tailwind
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/kit-tailwind
-          path: client/packages/kit-tailwind
-
-      - name: Checkout kit-primevue
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/kit-primevue
-          path: client/packages/kit-primevue
-
-      - name: Checkout module-fs
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/module-fs
-          path: client/packages/module-fs
-
-      - name: Checkout module-persistence
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/module-persistence
-          path: client/packages/module-persistence
-
-      - name: Checkout app-todo
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-todo
-          path: client/apps/app-todo
-
-      - name: Checkout app-dino
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-dino
-          path: client/apps/app-dino
-
-      - name: Checkout app-gridsky
-        uses: actions/checkout@v4
-        with:
-          repository: atproto-os/app-gridsky
-          path: client/apps/app-gridsky
-
-      - name: Checkout app-youtube
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-youtube
-          path: client/apps/app-youtube
-
-      - name: Checkout app-soundcloud
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-soundcloud
-          path: client/apps/app-soundcloud
-
-      - name: Checkout app-terminal
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-terminal
-          path: client/apps/app-terminal
-
-      - name: Checkout theme-nova
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/theme-nova
-          path: client/themes/theme-nova
-
-      - name: Overlay this theme-paper repo
-        uses: actions/checkout@v4
-        with:
-          path: client/themes/theme-paper
-
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - run: npm i -g --force corepack@latest && corepack enable
+      - name: Setup pnpm
+        run: npm i -g --force corepack@latest && corepack enable
 
-      - name: Install monorepo dependencies
-        working-directory: client
-        run: pnpm install --no-frozen-lockfile
+      - name: Build theme module
+        run: |
+          pnpm install --no-frozen-lockfile
+          pnpm run prepack
 
-      - name: Prepare module and playground
-        working-directory: client/themes/theme-paper
-        run: pnpm run dev:prepare
+      - name: Prepare playground
+        working-directory: playground
+        run: |
+          pnpm install --no-frozen-lockfile
+          pnpm exec nuxt prepare
 
-      - name: Validate module layout
-        working-directory: client/themes/theme-paper
-        run: pnpm run validate
-
-      - name: Generate playground (static)
-        working-directory: client/themes/theme-paper
-        run: pnpm run dev:generate
+      - name: Build playground (SPA export)
+        working-directory: playground
+        run: pnpm exec nuxt generate
         env:
           NUXT_APP_BASE_URL: /theme-paper/
 
@@ -122,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playground-dist
-          path: client/themes/theme-paper/playground/.output/public
+          path: playground/.output/public

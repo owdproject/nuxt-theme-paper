@@ -16,9 +16,9 @@ A minimal theme for Open Web Desktop focused on the core shell: windows, a slim 
 
 **Components**
 
-- `Desktop` — `DesktopCore` with `PaperSystemBar`, stage content, and `DesktopApplicationRender`
+- `Desktop` — `DesktopCore` with `PaperSystemBar`, stage content, and `DesktopCoreApplicationRender`
 - `Window` — title bar and content around `DesktopWindow`
-- Playground demo app — [`@owdproject/app-about`](https://owdproject.github.io/app-about/) (same as other theme playgrounds)
+- Playground apps: Dino, Gridsky, Terminal, YouTube, SoundCloud, and To-do.
 
 ## Installation
 
@@ -32,6 +32,8 @@ pnpm desktop add @owdproject/theme-paper
 
 ```typescript
 // desktop.config.ts
+import { defineDesktopConfig } from '@owdproject/nuxt'
+
 export default defineDesktopConfig({
   theme: '@owdproject/theme-paper',
   apps: ['@owdproject/app-about'],
@@ -41,9 +43,19 @@ export default defineDesktopConfig({
 ## Development
 
 ```bash
-cd themes/theme-paper
-pnpm run dev:prepare
+git clone https://github.com/owdproject/theme-paper.git
+cd theme-paper
+pnpm install
 pnpm dev
+```
+
+The theme and its playground form a standalone workspace. Use `@owdproject/nuxt` as the Nuxt module; the headless `@owdproject/core` is not a Nuxt module. The playground opens Terminal in development.
+
+To build the module and export the playground:
+
+```bash
+pnpm run prepack
+pnpm --dir playground run generate
 ```
 
 ## License

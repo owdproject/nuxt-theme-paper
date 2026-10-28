@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, useAttrs } from 'vue'
-import { useWindowDragHandlers } from 'nuxt-desktop/runtime/composables/useWindowDragHandlers'
+import { useWindowDragHandlers } from '@owdproject/nuxt/runtime/composables/useWindowDragHandlers'
 
 const props = defineProps<{
   window?: IWindowController
@@ -69,7 +69,7 @@ const { onDragStart, onDragEnd } = useWindowDragHandlers(
   border-radius: var(--paper-radius);
 }
 
-.paper-window :deep(.owd-window__content) {
+.paper-window :deep(.desktop-window__content) {
   flex: 1;
   min-height: 0;
 }
