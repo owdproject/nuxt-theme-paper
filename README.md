@@ -10,7 +10,7 @@
 
 A minimal theme for Open Web Desktop focused on the core shell: windows, a slim system bar, and little else. Use it to test window chrome, layout, and app rendering without the full Nova desktop experience.
 
-**Visual style** — modern linear UI with an e-ink feel: zinc neutrals, 1px hairlines, system sans, no grids or decorative chrome.
+**Visual style** — light and dark zinc neutrals, thin borders, compact system typography, and a subtle desktop grid.
 
 **Shell** — top system bar (start menu and clock); fixed window layer with resize and drag; no dock, workspaces, or file-system integration.
 
