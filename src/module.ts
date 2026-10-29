@@ -7,7 +7,7 @@ import {
   installModule,
 } from '@nuxt/kit'
 import { defineDesktopTheme } from '@owdproject/nuxt'
-import { registerThemeTailwindPath } from '@owdproject/kit-tailwind/kit/registerTailwindPath'
+import { registerThemeTailwindPath } from '@owdproject/kit-nuxt-tailwind/kit/registerTailwindPath'
 import { paperAppearanceBootstrapScript } from './runtime/utils/paperAppearance'
 
 export default defineDesktopTheme({
@@ -24,7 +24,7 @@ export default defineDesktopTheme({
   async setup(_options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    await installModule('@owdproject/kit-primevue', { explorer: false })
+    await installModule('@owdproject/kit-nuxt-primevue', { explorer: false })
 
     registerThemeTailwindPath(nuxt, import.meta.url)
 
