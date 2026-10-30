@@ -1,8 +1,8 @@
 {
-  "name": "@owdproject/theme-nuxt-paper",
+  "name": "@owdproject/nuxt-theme-paper",
   "version": "4.0.0-alpha.3",
   "description": "Open Web Desktop theme",
-  "homepage": "https://github.com/owdproject/theme-paper",
+  "homepage": "https://github.com/owdproject/nuxt-theme-paper",
   "license": "MIT",
   "author": {
     "name": "Open Web Desktop Team",
@@ -31,14 +31,14 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
-    "@owdproject/kit-nuxt-primevue": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
     "@owdproject/nuxt": "^4.0.0-alpha.3",
-    "@owdproject/kit-nuxt-tailwind": "^4.0.0-alpha.3"
+    "@owdproject/nuxt-kit-tailwind": "^4.0.0-alpha.3"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^1.0.2",
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/kit-nuxt-primevue": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
     "nuxt": "^4.6.2",
     "typescript": "~6.0.3",
     "vue-tsc": "^3.3.13",
@@ -47,8 +47,8 @@
   },
   "peerDependencies": {
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/kit-nuxt-primevue": "^4.0.0-alpha.3",
-    "@owdproject/kit-nuxt-tailwind": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-tailwind": "^4.0.0-alpha.3",
     "@owdproject/nuxt": "^4.0.0-alpha.3",
     "vue": "^3.5.33",
     "vue-i18n": "^11.0.0",

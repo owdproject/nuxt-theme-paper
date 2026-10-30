@@ -23,7 +23,7 @@ A minimal theme for Open Web Desktop focused on the core shell: windows, a slim 
 ## Installation
 
 ```bash
-pnpm desktop add @owdproject/theme-nuxt-paper
+pnpm desktop add @owdproject/nuxt-theme-paper
 ```
 
 ## Usage
@@ -35,15 +35,15 @@ pnpm desktop add @owdproject/theme-nuxt-paper
 import { defineDesktopConfig } from '@owdproject/nuxt'
 
 export default defineDesktopConfig({
-  theme: '@owdproject/theme-nuxt-paper',
-  apps: ['@owdproject/app-nuxt-about'],
+  theme: '@owdproject/nuxt-theme-paper',
+  apps: ['@owdproject/nuxt-app-about'],
 })
 ```
 
 ## Development
 
 ```bash
-git clone https://github.com/owdproject/theme-paper.git
+git clone https://github.com/owdproject/nuxt-theme-paper.git
 cd theme-paper
 pnpm install
 pnpm dev

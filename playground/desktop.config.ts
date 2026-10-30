@@ -1,15 +1,15 @@
 import { defineDesktopConfig } from '@owdproject/nuxt'
 
 export default defineDesktopConfig({
-  theme: '@owdproject/theme-nuxt-paper',
-  modules: ['@owdproject/module-nuxt-pinia-persistence'],
+  theme: '@owdproject/nuxt-theme-paper',
+  modules: ['@owdproject/nuxt-module-pinia-persistence'],
   apps: [
-    '@owdproject/app-nuxt-dino',
-    '@owdproject/app-gridsky',
-    '@owdproject/app-nuxt-terminal',
-    '@owdproject/app-nuxt-youtube',
-    '@owdproject/app-nuxt-soundcloud',
-    '@owdproject/app-nuxt-todo',
+    '@owdproject/nuxt-app-dino',
+    '@owdproject/nuxt-app-gridsky',
+    '@owdproject/nuxt-app-terminal',
+    '@owdproject/nuxt-app-youtube',
+    '@owdproject/nuxt-app-soundcloud',
+    '@owdproject/nuxt-app-todo',
   ],
   terminal: {
     welcomeMessage: 'Paper Desktop',

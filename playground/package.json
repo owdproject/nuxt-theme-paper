@@ -1,5 +1,5 @@
 {
-  "name": "@owdproject/theme-nuxt-paper-playground",
+  "name": "@owdproject/nuxt-theme-paper-playground",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,15 +8,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@owdproject/app-nuxt-dino": "^4.0.0-alpha.3",
-    "@owdproject/app-gridsky": "^4.0.0-alpha.3",
-    "@owdproject/app-nuxt-soundcloud": "^4.0.0-alpha.3",
-    "@owdproject/app-nuxt-terminal": "^4.0.0-alpha.3",
-    "@owdproject/app-nuxt-todo": "^4.0.0-alpha.3",
-    "@owdproject/app-nuxt-youtube": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-app-dino": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-app-gridsky": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-app-soundcloud": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-app-terminal": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-app-todo": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-app-youtube": "^4.0.0-alpha.3",
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/module-nuxt-pinia-persistence": "^4.0.0-alpha.3",
-    "@owdproject/theme-nuxt-paper": "workspace:*",
+    "@owdproject/nuxt-module-pinia-persistence": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-theme-paper": "workspace:*",
     "nuxt": "^4.6.2",
     "@owdproject/nuxt": "^4.0.0-alpha.3",
     "primevue": "^4.5.5"
