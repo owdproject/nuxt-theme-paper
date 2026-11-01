@@ -1,4 +1,5 @@
 import { watch } from 'vue'
+import { defineNuxtPlugin } from 'nuxt/app'
 import {
   DEFAULT_PAPER_APPEARANCE,
   PAPER_APPEARANCE_STORAGE_KEY,
